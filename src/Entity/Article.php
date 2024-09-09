@@ -27,6 +27,9 @@ class Article
 
     #[ORM\Column(
         type: Types::DATETIME_MUTABLE,
+        #est nullable
+        nullable: true,
+        #on passe la valeur par default en CURRENT_TIMESTAMP
         options:
         [
             'default' => 'CURRENT_TIMESTAMP',
@@ -35,6 +38,9 @@ class Article
     private ?\DateTimeInterface $dateCreated = null;
 
     #[ORM\Column(
+        type: Types::BOOLEAN,
+        #est nullable
+        nullable: true,
         options:
         [
             'default' => false,
